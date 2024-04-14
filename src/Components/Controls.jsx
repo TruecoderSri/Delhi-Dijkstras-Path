@@ -19,7 +19,6 @@ const Controls = ({ mapRef }) => {
   const [shortestPath, setShortestPath] = useState([]);
   const [visitedNodes, setVisitedNodes] = useState([]);
   const [distance, setDistance] = useState(0);
-  const [eta, setEta] = useState(0);
 
   const [startMarker, setStartMarker] = useState(null);
   const [viaMarker, setViaMarker] = useState(null);
@@ -88,7 +87,6 @@ const Controls = ({ mapRef }) => {
 
   const resetDistanceAndEta = () => {
     setDistance(0);
-    setEta(0);
   };
 
   const handleFindShortestRoute = () => {
@@ -187,8 +185,6 @@ const Controls = ({ mapRef }) => {
       totalDistance += calculateDistance(source, destination);
     }
     setDistance(totalDistance);
-    const estimatedTime = totalDistance * 3.5; // Estimated time (in minutes) based on 3.5 minutes per kilometer
-    setEta(estimatedTime);
   };
 
   const filteredViaLocations = Locations.filter(
@@ -208,7 +204,6 @@ const Controls = ({ mapRef }) => {
     setShortestPath([]);
     setVisitedNodes([]);
     setDistance(0);
-    setEta(0);
     resetMarkers();
     resetDistanceAndEta();
     clearMap();
@@ -380,27 +375,32 @@ const Controls = ({ mapRef }) => {
 
       {distance > 0 && (
         <div className="mt-4 bg-gray-100 p-4 rounded-lg">
-          <h2 className="text-lg font-semibold">Distance Traveled</h2>
+          <h2 className="text-lg font-semibold">Distance Travelled</h2>
           <p>{distance.toFixed(2)} km</p>
-        </div>
-      )}
-      {eta > 0 && (
-        <div className="mt-4 bg-gray-100 p-4 rounded-lg">
-          <h2 className="text-lg font-semibold">Estimated Time of Arrival</h2>
-          <p>{eta.toFixed(2)} minutes</p>
         </div>
       )}
 
       <Information />
 
       <div className="m-2">
-        <h1 className="m-1 flex justify-center font-bold text-2xl">
+        <h1 className="mb-4 flex justify-center font-bold text-2xl">
           Actual Graph of the Map
         </h1>
         <div
           className="  graph  rounded-lg p-1 flex justify-center "
           id="graph-container"
         ></div>
+        <div className=" p-2 rounded-md mt-4 border-b-2 ">
+          <p>
+            {" "}
+            <p className="font-semibold text-blue-900 text-lg p-2">
+              This is an undirected graph with a total of 25 places depiciting
+              nodes and each is connected to every other i.e 24 others so
+              constitutes a total of 25*24 = 600 edges and 25 nodes
+              respectively.
+            </p>
+          </p>
+        </div>
       </div>
     </div>
   );

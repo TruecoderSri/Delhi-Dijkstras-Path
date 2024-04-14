@@ -6,7 +6,7 @@ function Information() {
           <h2 className="text-lg font-semibold text-green-700 mb-2">
             Dijkstra&apos;s Algorithm
           </h2>
-          <p className="text-sm text-green-600 font-semibold ">
+          <p className="text-md text-green-600 font-semibold ">
             Dijkstras algorithm is an algorithm for finding the shortest paths
             between nodes in a graph, which may represent, for example, road
             networks. It was conceived by computer scientist Edsger W. Dijkstra
@@ -24,7 +24,7 @@ function Information() {
           <h2 className="text-lg font-semibold text-pink-700 mb-2">
             Inter-node Distance Calculation
           </h2>
-          <p className="text-sm text-pink-600 font-semibold ">
+          <p className="text-md text-pink-600 font-semibold ">
             The inter-node distance of a graph can be calculated using the
             following formula:
             <br />
@@ -55,7 +55,7 @@ function Information() {
           <h2 className="text-lg font-semibold text-purple-700 mb-2">
             Applications of Dijkstra &apos;s Algorithm
           </h2>
-          <p className="text-sm text-purple-600 font-semibold ">
+          <p className="text-md text-purple-600 font-semibold ">
             Dijkstras algorithm has various applications in real-world
             scenarios, including:
             <ul className="list-disc list-inside">
