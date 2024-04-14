@@ -1,0 +1,100 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+::-webkit-scrollbar{
+  width:0;
+}
+
+.controls::-webkit-scrollbar {
+  width: 10px;
+}
+
+.controls::-webkit-scrollbar-thumb {
+  background: #bfc3c6;
+  border-radius: 10px;
+}
+
+.controls::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #e7e8ea;
+}
+
+.parent{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+/* Define CSS styles for markers */
+.start-marker {
+  background-color: red;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+}
+
+.via-marker {
+  background-color: orange;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+}
+
+.end-marker {
+  background-color: green;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+}
+.info,h1,.inputs{
+  font-family: "Inter", sans-serif;
+}
+
+.legend-container{
+  padding:1rem;
+  border-radius:1rem;
+  background-color: rgba(253, 255, 237, 0.9);
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  height:min-content;
+}
+
+.graph{
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
