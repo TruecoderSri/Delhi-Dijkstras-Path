@@ -3,8 +3,7 @@ import Controls from "./Components/Controls";
 import { useRef } from "react";
 
 function App() {
-  const mapRef = useRef(null); // Create a ref for the map instance
-
+  const mapRef = useRef(null);
   return (
     <>
       <h1 className="text-4xl font-bold flex justify-center align-center p-2 m-2">
@@ -22,6 +21,17 @@ function App() {
           <Controls mapRef={mapRef} />
         </div>
       </div>
+      <h4 className="text-2xl font-semibold flex justify-center align-center p-2 m-2 h-12">
+        Source code
+        <a
+          href="https://github.com/TruecoderSri/dijkstras-path"
+          target="_blank"
+          className="text-blue-600 m-0 font-medium "
+        >
+          👉
+          <u>here</u>
+        </a>
+      </h4>
     </>
   );
 }
