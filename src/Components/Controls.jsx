@@ -387,7 +387,7 @@ const Controls = ({ mapRef }) => {
           Actual Graph of the Map
         </h1>
         <div
-          className="  graph  rounded-lg p-1 flex justify-center "
+          className="  graph  rounded-lg p-2 flex justify-center md:h-60 h-60 "
           id="graph-container"
         ></div>
         <div className=" p-2 rounded-md mt-4 border-b-2 ">

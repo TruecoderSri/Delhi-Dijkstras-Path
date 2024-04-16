@@ -50,7 +50,7 @@ const Maps = ({ mapRef }) => {
     };
   });
 
-  return <div id="map" className="p-2 h-full"></div>;
+  return <div id="map" className="p-2 md:h-full h-96"></div>;
 };
 
 Maps.propTypes = {
