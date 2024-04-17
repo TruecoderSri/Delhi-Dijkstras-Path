@@ -1,4 +1,3 @@
-// In Maps.js
 import PropTypes from "prop-types";
 import { useEffect } from "react";
 import L from "leaflet";
@@ -42,15 +41,25 @@ const Maps = ({ mapRef }) => {
       legendContainer.addTo(map);
     }
 
+    // Call invalidateSize when the component mounts and when the window is resized
+    const handleResize = () => {
+      if (mapRef.current) {
+        mapRef.current.invalidateSize();
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    mapRef.current.invalidateSize();
+
     return () => {
+      window.removeEventListener("resize", handleResize);
       if (mapRef.current) {
         mapRef.current.remove();
         mapRef.current = null;
       }
     };
-  });
+  }, [mapRef]);
 
-  return <div id="map" className="p-2 md:h-full h-96"></div>;
+  return <div id="map" className="p-2 md:h-full h-96 min-h-64 "></div>;
 };
 
 Maps.propTypes = {

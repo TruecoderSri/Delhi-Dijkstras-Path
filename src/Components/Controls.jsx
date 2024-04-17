@@ -330,13 +330,13 @@ const Controls = ({ mapRef }) => {
       <div className="button flex justify-around">
         <button
           onClick={handleFindShortestRoute}
-          className="align-center bg-blue-600 text-white py-1 px-2 rounded-lg  hover:bg-blue-800 w-44 h-12 text-md ring-offset ring"
+          className="align-center m-1 bg-blue-600 text-white py-1 px-2 rounded-lg  hover:bg-blue-800 w-44 h-12 text-md  "
         >
           Find Shortest Route
         </button>
         <button
           onClick={handleReset}
-          className="align-center bg-stone-600 text-white py-1 px-2 rounded-lg hover:bg-stone-800 w-44 h-12 text-lg "
+          className="align-center m-1 bg-stone-600 text-white py-1 px-2 rounded-lg hover:bg-stone-800 w-44 h-12 text-md "
         >
           Reset
         </button>
@@ -387,18 +387,14 @@ const Controls = ({ mapRef }) => {
           Actual Graph of the Map
         </h1>
         <div
-          className="  graph  rounded-lg p-2 flex justify-center md:h-60 h-60 "
+          className="graph rounded-lg md:p-2 flex justify-center md:h-60 h-96 p-0.5 "
           id="graph-container"
         ></div>
         <div className=" p-2 rounded-md mt-4 border-b-2 ">
-          <p>
-            {" "}
-            <p className="font-semibold text-blue-900 text-lg p-2">
-              This is an undirected graph with a total of 25 places depiciting
-              nodes and each is connected to every other i.e 24 others so
-              constitutes a total of 25*24 = 600 edges and 25 nodes
-              respectively.
-            </p>
+          <p className="font-semibold text-blue-900 text-lg p-2">
+            This is an undirected graph with a total of 25 places depiciting
+            nodes and each is connected to every other i.e 24 others so
+            constitutes a total of 25*24 = 600 edges and 25 nodes respectively.
           </p>
         </div>
       </div>

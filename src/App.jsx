@@ -10,7 +10,7 @@ function App() {
         <i className="mr-3 font-semibold"> Dijkstra&apos;s </i> algorithm for
         shortest distances in Delhi
       </h1>
-      <div className="hidden md:flex flex-row flex-wrap h-screen m-4 p-2 overflow-hidden">
+      <div className="hidden md:flex flex-row flex-wrap h-screen m-4 p-2 overflow-x-hidden ">
         <div className="w-3/5 bg-gray-200 h-full">
           <Maps mapRef={mapRef} />
         </div>

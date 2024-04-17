@@ -58,14 +58,14 @@ function Information() {
           <p className="text-md text-purple-600 font-semibold ">
             Dijkstras algorithm has various applications in real-world
             scenarios, including:
-            <ul className="list-disc list-inside">
-              <li>Routing algorithms in computer networks</li>
-              <li>GPS navigation systems for finding the shortest route</li>
-              <li>Robotics for path planning</li>
-              <li>Flight path optimization in aviation</li>
-              <li>Telecommunications for optimizing data packet routing</li>
-            </ul>
           </p>
+          <ul className="list-disc list-inside text-md text-purple-600 font-semibold">
+            <li>Routing algorithms in computer networks</li>
+            <li>GPS navigation systems for finding the shortest route</li>
+            <li>Robotics for path planning</li>
+            <li>Flight path optimization in aviation</li>
+            <li>Telecommunications for optimizing data packet routing</li>
+          </ul>
         </div>
       </div>
     </>
