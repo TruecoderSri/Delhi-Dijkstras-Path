@@ -27,17 +27,14 @@ const Controls = ({ mapRef }) => {
     RenderGraph();
   }, []);
 
-  useEffect(() => {
-    const scrollWithDelay = () => {
-      setTimeout(() => {
-        window.scrollTo({
-          top: document.body.scrollHeight,
-          behavior: "smooth"
-        });
-      }, 2000); 
-    };
-
-    scrollWithDelay();
+   useEffect(() => {
+    
+     setTimeout(() => {
+      const bottomElement = document.querySelector(".bottom-container");
+      if (bottomElement) {
+        bottomElement.scrollIntoView({ behavior: "smooth" });
+      }
+    });
   }, []);
 
   const handleStartLocationChange = (e) => {
@@ -395,7 +392,7 @@ const Controls = ({ mapRef }) => {
 
       <Information />
 
-      <div className="m-2">
+      <div className=".bottom-container m-2">
         <h1 className="mb-4 flex justify-center font-bold text-2xl">
           Actual Graph of the Map
         </h1>
