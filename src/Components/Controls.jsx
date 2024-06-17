@@ -28,7 +28,7 @@ const Controls = ({ mapRef }) => {
   }, []);
 
    useEffect(() => {
-    
+     RenderGraph();
      setTimeout(() => {
       const bottomElement = document.querySelector(".bottom-container");
       if (bottomElement) {
