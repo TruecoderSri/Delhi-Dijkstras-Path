@@ -392,7 +392,7 @@ const Controls = ({ mapRef }) => {
 
       <Information />
 
-      <div className=".bottom-container m-2">
+      <div className="bottom-container m-2">
         <h1 className="mb-4 flex justify-center font-bold text-2xl">
           Actual Graph of the Map
         </h1>
