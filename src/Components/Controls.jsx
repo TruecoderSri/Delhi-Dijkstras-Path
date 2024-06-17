@@ -27,6 +27,19 @@ const Controls = ({ mapRef }) => {
     RenderGraph();
   }, []);
 
+  useEffect(() => {
+    const scrollWithDelay = () => {
+      setTimeout(() => {
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: "smooth"
+        });
+      }, 2000); 
+    };
+
+    scrollWithDelay();
+  }, []);
+
   const handleStartLocationChange = (e) => {
     setStartLocation(e.target.value);
     setViaLocation("");
