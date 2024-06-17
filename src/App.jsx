@@ -5,17 +5,6 @@ import Controls from "./Components/Controls";
 function App() {
   const mapRef = useRef(null);
 
-  useEffect(() => {
-    const scrollToBottom = () => {
-      window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: "smooth"
-      });
-    };
-
-    scrollToBottom();
-  }, []);
-
   return (
     <>
       <h1 className="text-4xl font-bold text-center p-2 m-2">
